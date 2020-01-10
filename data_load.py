@@ -12,6 +12,7 @@ For example, fpath1, fpath2 means source file path and target file path, respect
 import tensorflow as tf
 from utils import calc_num_batches
 
+
 def load_vocab(vocab_fpath):
     '''Loads vocabulary file and returns idx<->token maps
     vocab_fpath: string. vocabulary file path.
@@ -25,6 +26,7 @@ def load_vocab(vocab_fpath):
     token2idx = {token: idx for idx, token in enumerate(vocab)}
     idx2token = {idx: token for idx, token in enumerate(vocab)}
     return token2idx, idx2token
+
 
 def load_data(fpath1, fpath2, maxlen1, maxlen2):
     '''Loads source and target data and filters out too lengthy samples.
@@ -63,6 +65,7 @@ def encode(inp, type, dict):
     x = [dict.get(t, dict["<unk>"]) for t in tokens]
     return x
 
+
 def generator_fn(sents1, sents2, vocab_fpath):
     '''Generates training / evaluation data
     sents1: list of source sents
@@ -88,6 +91,7 @@ def generator_fn(sents1, sents2, vocab_fpath):
 
         x_seqlen, y_seqlen = len(x), len(y)
         yield (x, x_seqlen, sent1), (decoder_input, y, y_seqlen, sent2)
+
 
 def input_fn(sents1, sents2, vocab_fpath, batch_size, shuffle=False):
     '''Batchify data
@@ -129,6 +133,7 @@ def input_fn(sents1, sents2, vocab_fpath, batch_size, shuffle=False):
 
     return dataset
 
+
 def get_batch(fpath1, fpath2, maxlen1, maxlen2, vocab_fpath, batch_size, shuffle=False):
     '''Gets training / evaluation mini-batches
     fpath1: source file path. string.
@@ -144,13 +149,6 @@ def get_batch(fpath1, fpath2, maxlen1, maxlen2, vocab_fpath, batch_size, shuffle
     num_batches: number of mini-batches
     num_samples
     '''
-    sents1, sents2 = load_data(fpath1, fpath2, maxlen1, maxlen2)
-    batches = input_fn(sents1, sents2, vocab_fpath, batch_size, shuffle=shuffle)
-    num_batches = calc_num_batches(len(sents1), batch_size)
-    return batches, num_batches, len(sents1)
-
-
-def get_batch_barrages(fpath1, fpath2, maxlen1, maxlen2, vocab_fpath, batch_size, shuffle=False):
     sents1, sents2 = load_data(fpath1, fpath2, maxlen1, maxlen2)
     batches = input_fn(sents1, sents2, vocab_fpath, batch_size, shuffle=shuffle)
     num_batches = calc_num_batches(len(sents1), batch_size)

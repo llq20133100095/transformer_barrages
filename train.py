@@ -26,13 +26,13 @@ hp = parser.parse_args()
 save_hparams(hp, hp.logdir)
 
 logging.info("# Prepare train/eval batches")
-train_batches, num_train_batches, num_train_samples = get_batch(hp.train1, hp.train2,
-                                             hp.maxlen1, hp.maxlen2,
-                                             hp.vocab, hp.batch_size,
+train_batches, num_train_batches, num_train_samples = get_batch(hp.train_x, hp.train_y,
+                                             hp.barrages_maxlen1, hp.barrages_maxlen2,
+                                             hp.barrages_vocab, hp.batch_size,
                                              shuffle=True)
 eval_batches, num_eval_batches, num_eval_samples = get_batch(hp.eval1, hp.eval2,
                                              100000, 100000,
-                                             hp.vocab, hp.batch_size,
+                                             hp.barrages_vocab, hp.batch_size,
                                              shuffle=False)
 
 # create a iterator of the correct shape and type
@@ -100,4 +100,4 @@ with tf.Session() as sess:
     summary_writer.close()
 
 
-logging.info("Done")
+logging.info("# Done")

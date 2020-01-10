@@ -29,9 +29,9 @@ class Hparams:
 
     parser.add_argument('--lr', default=0.0003, type=float, help="learning rate")
     parser.add_argument('--warmup_steps', default=4000, type=int)
-    parser.add_argument('--logdir', default="log/1", help="log directory")
+    parser.add_argument('--logdir', default="log/barrages", help="log directory")
     parser.add_argument('--num_epochs', default=20, type=int)
-    parser.add_argument('--evaldir', default="eval/1", help="evaluation dir")
+    parser.add_argument('--evaldir', default="eval/barrages", help="evaluation dir")
 
     # model
     parser.add_argument('--d_model', default=512, type=int,
@@ -63,3 +63,20 @@ class Hparams:
 
     # barrages
     parser.add_argument('--barrages_data', default="barrages_data/origin/train_data_has_neg.txt", help="origin data")
+
+    parser.add_argument('--train_x', default='barrages_data/segmented/train_x.bpe',
+                        help="input barrages data")
+    parser.add_argument('--train_y', default='barrages_data/segmented/train_y.bpe',
+                        help="output barrages data")
+    parser.add_argument('--eval_x', default='barrages_data/segmented/train_x.bpe',
+                        help="input barrages data")
+    parser.add_argument('--eval_y', default='barrages_data/segmented/train_y.bpe',
+                        help="output barrages data")
+
+    parser.add_argument('--barrages_vocab', default='barrages_data/segmented/bpe.vocab',
+                        help="vocabulary file path")
+
+    parser.add_argument('--barrages_maxlen1', default=20, type=int,
+                        help="maximum length of a source sequence")
+    parser.add_argument('--barrages_maxlen2', default=20, type=int,
+                        help="maximum length of a target sequence")
