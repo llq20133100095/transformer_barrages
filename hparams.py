@@ -55,7 +55,7 @@ class Hparams:
                         help="german test segmented data")
     parser.add_argument('--test2', default='iwslt2016/prepro/test.en',
                         help="english test data")
-    parser.add_argument('--ckpt', help="checkpoint file path")
+    parser.add_argument('--ckpt', default='log/barrages', help="checkpoint file path")
     parser.add_argument('--test_batch_size', default=128, type=int)
     parser.add_argument('--testdir', default="test/1", help="test result dir")
 

@@ -22,7 +22,7 @@ def load_vocab(vocab_fpath):
     Returns
     two dictionaries.
     '''
-    vocab = [line.split()[0] for line in open(vocab_fpath, 'r').read().splitlines()]
+    vocab = [line.split()[0] for line in open(vocab_fpath, 'r', encoding="utf-8").read().splitlines()]
     token2idx = {token: idx for idx, token in enumerate(vocab)}
     idx2token = {idx: token for idx, token in enumerate(vocab)}
     return token2idx, idx2token
