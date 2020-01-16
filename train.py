@@ -30,7 +30,7 @@ train_batches, num_train_batches, num_train_samples = get_batch(hp.train_x, hp.t
                                              hp.barrages_maxlen1, hp.barrages_maxlen2,
                                              hp.barrages_vocab, hp.batch_size,
                                              shuffle=True)
-eval_batches, num_eval_batches, num_eval_samples = get_batch(hp.eval1, hp.eval2,
+eval_batches, num_eval_batches, num_eval_samples = get_batch(hp.eval_x, hp.eval_y,
                                              100000, 100000,
                                              hp.barrages_vocab, hp.batch_size,
                                              shuffle=False)
@@ -84,11 +84,11 @@ with tf.Session() as sess:
             model_output = "iwslt2016_E%02dL%.2f" % (epoch, _loss)
             if not os.path.exists(hp.evaldir): os.makedirs(hp.evaldir)
             translation = os.path.join(hp.evaldir, model_output)
-            with open(translation, 'w') as fout:
+            with open(translation, 'w', encoding="utf-8") as fout:
                 fout.write("\n".join(hypotheses))
 
             logging.info("# calc bleu score and append it to translation")
-            calc_bleu(hp.eval3, translation)
+            calc_bleu(hp.eval_y2, translation)
 
             logging.info("# save models")
             ckpt_name = os.path.join(hp.logdir, model_output)

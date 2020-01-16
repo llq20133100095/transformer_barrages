@@ -72,6 +72,8 @@ class Hparams:
                         help="input barrages data")
     parser.add_argument('--eval_y', default='barrages_data/segmented/train_y.bpe',
                         help="output barrages data")
+    parser.add_argument('--eval_y2', default='barrages_data/prepro/train_y.txt',
+                        help="evaluation unsegmented data")
 
     parser.add_argument('--barrages_vocab', default='barrages_data/segmented/bpe.vocab',
                         help="vocabulary file path")

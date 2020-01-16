@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="liluoqin@127.0.0.195:2235">
     <serverData>
       <paths name="liluoqin@127.0.0.195:2235">
         <serverdata>
           <mappings>
-            <mapping deploy="/data/datacenter/liluoqin/transformer-master" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/data/datacenter/liluoqin/transformer_barrages" local="$PROJECT_DIR$/../transformer_barrages" web="/" />
           </mappings>
         </serverdata>
       </paths>

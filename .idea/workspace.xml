@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1250">
-              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="347">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
               <folding>
                 <element signature="e#149#172#0" expanded="true" />
               </folding>
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/data_load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="44" column="24" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="24" />
+            <state relative-caret-position="692">
+              <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="18" selection-end-line="153" selection-end-column="34" />
               <folding>
                 <element signature="e#339#362#0" expanded="true" />
               </folding>
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="145" column="28" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="28" />
+            <state relative-caret-position="462">
+              <caret line="156" column="67" selection-start-line="156" selection-start-column="64" selection-end-line="156" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/hparams.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="57" column="31" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="31" />
+            <state relative-caret-position="451">
+              <caret line="74" column="34" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -65,10 +65,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../transformer_barrages/modules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="304" column="8" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages_generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="24" />
+            <state>
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="e#261#270#0" expanded="true" />
               </folding>
@@ -79,11 +88,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../transformer_barrages/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="143" column="10" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="10" />
+            <state relative-caret-position="380">
+              <caret line="176" column="25" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="25" />
               <folding>
                 <element signature="e#171#194#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages_data/segmented/bpe.vocab">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -95,18 +113,6 @@
               <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
               <folding>
                 <element signature="e#188#197#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages/barrages_prepro.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="6" selection-end-column="3" />
-              <folding>
-                <element signature="e#104#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,8 +138,15 @@
       <find>num_blocks</find>
       <find>num_heads</find>
       <find>vocab_size</find>
-      <find>logdir</find>
       <find>ckpt</find>
+      <find>logdir</find>
+      <find>evaldir</find>
+      <find>eval2</find>
+      <find>train_x</find>
+      <find>eval3</find>
+      <find>barrages_maxlen2</find>
+      <find>ref</find>
+      <find>maxlen2</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -146,9 +159,11 @@
         <option value="$PROJECT_DIR$/barrages/barrages_prepro.py" />
         <option value="$PROJECT_DIR$/../transformer_barrages/barrages/barrages_prepro.py" />
         <option value="$PROJECT_DIR$/../transformer_barrages/data_load.py" />
-        <option value="$PROJECT_DIR$/../transformer_barrages/train.py" />
-        <option value="$PROJECT_DIR$/../transformer_barrages/hparams.py" />
         <option value="$PROJECT_DIR$/../transformer_barrages/barrages_generate.py" />
+        <option value="$PROJECT_DIR$/../transformer_barrages/utils.py" />
+        <option value="$PROJECT_DIR$/../transformer_barrages/model.py" />
+        <option value="$PROJECT_DIR$/../transformer_barrages/hparams.py" />
+        <option value="$PROJECT_DIR$/../transformer_barrages/train.py" />
       </list>
     </option>
   </component>
@@ -185,7 +200,7 @@
               <item name="transformer_barrages" type="b2602c69:ProjectViewProjectNode" />
               <item name="transformer_barrages" type="462c0819:PsiDirectoryNode" />
               <item name="barrages_data" type="462c0819:PsiDirectoryNode" />
-              <item name="origin" type="462c0819:PsiDirectoryNode" />
+              <item name="prepro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transformer_barrages" type="b2602c69:ProjectViewProjectNode" />
@@ -217,7 +232,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transformer_barrages" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="pyconsole" />
@@ -506,19 +521,19 @@
       <workItem from="1576202873894" duration="18924000" />
       <workItem from="1577931644024" duration="20281000" />
       <workItem from="1578621343235" duration="801000" />
-      <workItem from="1578626262894" duration="8728000" />
+      <workItem from="1578626262894" duration="20998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48734000" />
+    <option name="totallyTimeSpent" value="61004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7290323" visible="true" weight="0.11353944" />
-      <window_info id="Structure" order="1" sideWeight="0.27096775" side_tool="true" visible="true" weight="0.11353944" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72943723" visible="true" weight="0.11353944" />
+      <window_info id="Structure" order="1" sideWeight="0.27056277" side_tool="true" visible="true" weight="0.11353944" />
       <window_info id="Favorites" order="2" sideWeight="0.26612905" side_tool="true" weight="0.12846482" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -531,9 +546,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32900432" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32900432" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32900432" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -664,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/iwslt2016/prepro/test.de">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -750,6 +758,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/log/1/hparams">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/log/1/specs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages/barrages_prepro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#104#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda/envs/py3/Lib/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="818" column="6" selection-start-line="818" selection-start-column="6" selection-end-line="818" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/prepro.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -762,73 +793,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages_data/segmented/bpe.vocab">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5746">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/log/1/hparams">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/log/1/specs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/data_load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="24" />
-          <folding>
-            <element signature="e#339#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1250">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding>
-            <element signature="e#149#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="143" column="10" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="10" />
-          <folding>
-            <element signature="e#171#194#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages/barrages_prepro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="e#104#113#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="227">
+          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages_generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="24" />
+        <state>
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="e#261#270#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../transformer_barrages/hparams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="31" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/iwslt2016/prepro/eval.en">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/barrages_data/prepro/train_y.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -837,10 +821,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="304" column="8" selection-start-line="304" selection-start-column="4" selection-end-line="304" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/data_load.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="18" selection-end-line="153" selection-end-column="34" />
+          <folding>
+            <element signature="e#339#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="176" column="25" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="25" />
+          <folding>
+            <element signature="e#171#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../transformer_barrages/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="145" column="28" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="28" />
+        <state relative-caret-position="462">
+          <caret line="156" column="67" selection-start-line="156" selection-start-column="64" selection-end-line="156" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/hparams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../transformer_barrages/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+          <folding>
+            <element signature="e#149#172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -173,7 +173,7 @@ class Transformer:
         memory, sents1, src_masks = self.encode(xs, False)
 
         logging.info("Inference graph is being built. Please be patient.")
-        for _ in tqdm(range(self.hp.maxlen2)):
+        for _ in tqdm(range(self.hp.barrages_maxlen2)):
             logits, y_hat, y, sents2 = self.decode(ys, memory, src_masks, False)
             if tf.reduce_sum(y_hat, 1) == self.token2idx["<pad>"]: break
 
