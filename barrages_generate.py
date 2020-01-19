@@ -37,7 +37,7 @@ def gen_barrage(raw_input):
 
     logging.info("# Load model")
     m = Transformer(hp)
-    y_hat, _ = m.eval(xs, ys)
+    y_hat, _, random_predict = m.eval_gen(xs, ys)
 
     logging.info("# Session")
     with tf.Session() as sess:
@@ -48,6 +48,7 @@ def gen_barrage(raw_input):
         saver.restore(sess, ckpt)
 
         sess.run(test_init_op)
+        y_output = sess.run(random_predict)
 
         logging.info("# get hypotheses")
         hypotheses = get_hypotheses(1, 1, sess, y_hat, m.idx2token)
@@ -55,8 +56,12 @@ def gen_barrage(raw_input):
         logging.info("# write results")
         logging.info(hypotheses)
 
+        logging.info("# Done")
+
+    return y_output
+
 
 if __name__ == "__main__":
     logging.info("# Prepare input sentence")
-    raw_barrages = input()
-    gen_barrage(raw_barrages)
+    raw_barrages = "冲锋枪和M4比哪个好"
+    y_output = gen_barrage(raw_barrages)

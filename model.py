@@ -11,7 +11,7 @@ import tensorflow as tf
 
 from data_load import load_vocab
 from modules import get_token_embeddings, ff, positional_encoding, multihead_attention, label_smoothing, noam_scheme
-from utils import convert_idx_to_token_tensor
+from utils import convert_idx_to_token_tensor, random_id
 from tqdm import tqdm
 import logging
 
@@ -193,3 +193,45 @@ class Transformer:
 
         return y_hat, summaries
 
+    def eval_gen(self, xs, ys):
+        """
+        Predicts barrages
+        :param xs: x: (N, T1); seqlens; sents1
+        :param ys:
+        :return:
+            y_hat: (N, T2)
+        """
+        x, seqlens, sents1 = xs
+        decoder_inputs, y, y_seqlen, sents2 = ys
+
+        decoder_inputs = tf.ones((tf.shape(xs[0])[0], 1), tf.int32) * self.token2idx["<s>"]
+        ys = (decoder_inputs, y, y_seqlen, sents2)
+
+        logging.info("Inference graph is being built. Please be patient.")
+        for _ in tqdm(range(self.hp.barrages_maxlen2)):
+            memory, sents1, src_masks = self.encode(xs, False)
+            # memory_ = tf.to_int32(tf.argmax(memory, axis=-1))
+            memory_ = random_id(memory)
+
+            logits, y_hat, y, sents2 = self.decode(ys, memory, src_masks, False)
+            if tf.reduce_sum(y_hat, 1) == self.token2idx["<pad>"]: break
+
+            # concat input
+            _x = tf.concat((x, memory_), 1)
+            xs = (_x, seqlens, sents1)
+
+            _decoder_inputs = tf.concat((decoder_inputs, y_hat), 1)
+            ys = (_decoder_inputs, y, y_seqlen, sents2)
+
+        # monitor a random sample
+        n = tf.random_uniform((), 0, tf.shape(y_hat)[0] - 1, tf.int32)
+        sent1 = sents1[n]
+        pred = convert_idx_to_token_tensor(y_hat[n], self.idx2token)
+        sent2 = sents2[n]
+
+        tf.summary.text("sent1", sent1)
+        tf.summary.text("pred", pred)
+        tf.summary.text("sent2", sent2)
+        summaries = tf.summary.merge_all()
+
+        return y_hat, summaries, random_id(logits)

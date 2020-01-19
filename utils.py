@@ -69,7 +69,7 @@ def postprocess(hypotheses, idx2token):
     for h in hypotheses:
         sent = "".join(idx2token[idx] for idx in h)
         sent = sent.split("</s>")[0].strip()
-        sent = sent.replace("▁", " ") # remove bpe symbols
+        sent = sent.replace("▁", "") # remove bpe symbols
         _hypotheses.append(sent.strip())
     return _hypotheses
 
@@ -169,11 +169,13 @@ def calc_bleu(ref, translation):
     os.remove("temp")
 
 
-# def get_inference_variables(ckpt, filter):
-#     reader = pywrap_tensorflow.NewCheckpointReader(ckpt)
-#     var_to_shape_map = reader.get_variable_to_shape_map()
-#     vars = [v for v in sorted(var_to_shape_map) if filter not in v]
-#     return vars
+def random_id(predict):
+    N, T, vocab_size = tf.shape(predict)[0], tf.shape(predict)[1], tf.shape(predict)[2]
+    pre_mol= tf.transpose(predict, perm=[0, 2, 1])  # (N, vocab_size, T)
+    pre_den = tf.reshape(tf.reduce_sum(predict, axis=-1), [N, 1, T])    # (N, 1, T)
+    predict = tf.reshape(tf.transpose(tf.div(pre_mol, pre_den), perm=[0, 2, 1]), [-1, vocab_size]) # (N * T, vocab_size)
+    sample = tf.to_int32(tf.reshape(tf.multinomial(predict, 1), [N, T]))
+    return sample
 
 
 

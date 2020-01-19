@@ -27,13 +27,13 @@ save_hparams(hp, hp.logdir)
 
 logging.info("# Prepare train/eval batches")
 train_batches, num_train_batches, num_train_samples = get_batch(hp.train_x, hp.train_y,
-                                             hp.barrages_maxlen1, hp.barrages_maxlen2,
-                                             hp.barrages_vocab, hp.batch_size,
-                                             shuffle=True)
+                                                                 hp.barrages_maxlen1, hp.barrages_maxlen2,
+                                                                 hp.barrages_vocab, hp.batch_size,
+                                                                 shuffle=True)
 eval_batches, num_eval_batches, num_eval_samples = get_batch(hp.eval_x, hp.eval_y,
-                                             100000, 100000,
-                                             hp.barrages_vocab, hp.batch_size,
-                                             shuffle=False)
+                                                             100000, 100000,
+                                                             hp.barrages_vocab, hp.batch_size,
+                                                             shuffle=False)
 
 # create a iterator of the correct shape and type
 iter = tf.data.Iterator.from_structure(train_batches.output_types, train_batches.output_shapes)
@@ -87,7 +87,7 @@ with tf.Session() as sess:
             with open(translation, 'w', encoding="utf-8") as fout:
                 fout.write("\n".join(hypotheses))
 
-            print(hypotheses[0])
+            print(hypotheses)
             logging.info("# calc bleu score and append it to translation")
             calc_bleu(hp.eval_y2, translation)
 
