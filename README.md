@@ -1,22 +1,5 @@
-# **[UPDATED]** A TensorFlow Implementation of [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-
-When I opened this repository in 2017, there was no official code yet.
-I tried to implement the paper as I understood, but to no surprise
-it had several bugs. I realized them mostly thanks to people who issued here, so
-I'm very grateful to all of them. Though there is the [official implementation](https://github.com/tensorflow/tensor2tensor) as well as
-several other unofficial github repos, I decided to update my own one.
-This update focuses on:
-* readable / understandable code writing
-* modularization (but not too much)
-* revising known bugs. (masking, positional encoding, ...)
-* updating to TF1.12. (tf.data, ...)
-* adding some missing components (bpe, shared weight matrix, ...)
-* including useful comments in the code.
-
-I still stick to IWSLT 2016 de-en. I guess if you'd like to test on a big data such
-as WMT, you would rely on the official implementation.
-After all, it's pleasant to check quickly if your model works.
-The initial code for TF1.2 is moved to the [tf1.2_lecacy](tf1.2_legacy) folder for the record.
+# Barrages generate
+弹幕生成模型，主要用到了transformer生成器。
 
 ## Requirements
 * python==3.x (Let's move on to python 3 if you still use python 2)
