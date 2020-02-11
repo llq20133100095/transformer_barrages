@@ -195,7 +195,7 @@ class Transformer:
 
     def eval_gen(self, xs, ys):
         """
-        Predicts barrages
+        Predicts pretreatment
         :param xs: x: (N, T1); seqlens; sents1
         :param ys:
         :return:
@@ -208,19 +208,20 @@ class Transformer:
         ys = (decoder_inputs, y, y_seqlen, sents2)
 
         logging.info("Inference graph is being built. Please be patient.")
-        for _ in tqdm(range(self.hp.barrages_maxlen2)):
+
+        for _ in tqdm(range(3)):
             memory, sents1, src_masks = self.encode(xs, False)
             # memory_ = tf.to_int32(tf.argmax(memory, axis=-1))
-            memory_ = random_id(memory)
+            # memory_ = random_id(memory)
 
             logits, y_hat, y, sents2 = self.decode(ys, memory, src_masks, False)
             if tf.reduce_sum(y_hat, 1) == self.token2idx["<pad>"]: break
 
             # concat input
-            _x = tf.concat((x, memory_), 1)
+            _x = tf.concat((x, random_id(logits)), 1)
             xs = (_x, seqlens, sents1)
 
-            _decoder_inputs = tf.concat((decoder_inputs, y_hat), 1)
+            _decoder_inputs = tf.concat((decoder_inputs, random_id(logits)), 1)
             ys = (_decoder_inputs, y, y_seqlen, sents2)
 
         # monitor a random sample
@@ -234,4 +235,4 @@ class Transformer:
         tf.summary.text("sent2", sent2)
         summaries = tf.summary.merge_all()
 
-        return y_hat, summaries, random_id(logits)
+        return y_hat, summaries, logits

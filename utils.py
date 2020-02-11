@@ -14,6 +14,7 @@ import tensorflow as tf
 import json
 import os, re
 import logging
+import sentencepiece as spm
 
 logging.basicConfig(level=logging.INFO)
 
@@ -145,7 +146,7 @@ def get_hypotheses(num_batches, num_samples, sess, tensor, dict):
         hypotheses.extend(h.tolist())
     hypotheses = postprocess(hypotheses, dict)
 
-    return hypotheses[:num_samples]
+    return hypotheses[:num_samples], h
 
 def calc_bleu(ref, translation):
     '''Calculates bleu score and appends the report to translation
@@ -170,13 +171,30 @@ def calc_bleu(ref, translation):
 
 
 def random_id(predict):
+    """
+    randomly get a sample
+    :param predict: (N, T, vocab_size)
+    :return:
+        sample: (N, T)
+    """
+    predict_exp = tf.exp(predict)
     N, T, vocab_size = tf.shape(predict)[0], tf.shape(predict)[1], tf.shape(predict)[2]
-    pre_mol= tf.transpose(predict, perm=[0, 2, 1])  # (N, vocab_size, T)
-    pre_den = tf.reshape(tf.reduce_sum(predict, axis=-1), [N, 1, T])    # (N, 1, T)
-    predict = tf.reshape(tf.transpose(tf.div(pre_mol, pre_den), perm=[0, 2, 1]), [-1, vocab_size]) # (N * T, vocab_size)
-    sample = tf.to_int32(tf.reshape(tf.multinomial(predict, 1), [N, T]))
+    pre_mol= tf.transpose(predict_exp, perm=[0, 2, 1])  # (N, vocab_size, T)
+    pre_den = tf.reshape(tf.reduce_sum(predict_exp, axis=-1), [N, 1, T])    # (N, 1, T)
+    predict_exp = tf.reshape(tf.transpose(tf.div(pre_mol, pre_den), perm=[0, 2, 1]), [-1, vocab_size]) # (N * T, vocab_size)
+    sample = tf.to_int32(tf.reshape(tf.multinomial(predict_exp, 1), [N, T]))
     return sample
 
 
-
+def pro_sentpiece(sent, bep_model):
+    """
+    Process input sentence. Use the sentencepiece to segment sentence.
+    :param sent:
+    :param bep_model:
+    :return: string, has pieces
+    """
+    sp = spm.SentencePieceProcessor()
+    sp.Load(bep_model)
+    pieces = sp.EncodeAsPieces(sent)
+    return " ".join(pieces)
 

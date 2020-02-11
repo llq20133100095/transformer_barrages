@@ -8,35 +8,47 @@
 * sentencepiece==0.1.8
 * tqdm>=4.28.1
 
-## Training
-* STEP 1. Run the command below to download [IWSLT 2016 German–English parallel corpus](https://wit3.fbk.eu/download.php?release=2016-01&type=texts&slang=de&tlang=en).
+## Dataset
+虎牙直播中，绝地求生的弹幕语料。其数据存放在：
 ```
-bash download.sh
+barrages_data/train_data_has_neg.txt
 ```
- It should be extracted to `iwslt2016/de-en` folder automatically.
-* STEP 2. Run the command below to create preprocessed train/eval/test data.
-```
-python prepro.py
-```
-If you want to change the vocabulary size (default:32000), do this.
-```
-python prepro.py --vocab_size 8000
-```
-It should create two folders `iwslt2016/prepro` and `iwslt2016/segmented`.
 
-* STEP 3. Run the following command.
+## Training
+* STEP 1. 运行下面的命令，生成预处理的弹幕语料
+```
+python pretreatment/prepro.py
+```
+如果你想调整默认的词典大小(default:32000)，可以进行下面的命令：
+```
+python pretreatment/prepro.py --vocab_size 8000
+```
+它会创建两个文件 `barrages_data/prepro` and `barrages_data/segmented`.
+
+* STEP 2. 训练模型
 ```
 python train.py
 ```
-Check `hparams.py` to see which parameters are possible. For example,
+参数设置放在 `hparams.py` ，可以根据里面的参数进行对应设置，比如：
 ```
 python train.py --logdir myLog --batch_size 256 --dropout_rate 0.5
 ```
 
-* STEP 3. Or download the pretrained models.
+* STEP 3. 根据输入的句子，生成弹幕
 ```
-wget https://dl.dropbox.com/s/4lom1czy5xfzr4q/log.zip; unzip log.zip; rm log.zip
+python barrrages_generate.py
 ```
+
+## Result
+当输入：
+```
+老司机
+```
+
+输出句子：
+
+![img](./fig/barrage_gen.png)
+
 
 
 ## Training Loss Curve
@@ -48,21 +60,3 @@ wget https://dl.dropbox.com/s/4lom1czy5xfzr4q/log.zip; unzip log.zip; rm log.zip
 ## Bleu score on devset
 <img src="fig/bleu.png">
 
-
-## Inference (=test)
-* Run
-```
-python test.py --ckpt log/1/iwslt2016_E19L2.64-29146 (OR yourCkptFile OR yourCkptFileDirectory)
-```
-
-## Results
-* Typically, machine translation is evaluated with Bleu score.
-* All evaluation results are available in [eval/1](eval/1) and [test/1](test/1).
-
-|tst2013 (dev) | tst2014 (test) |
-|--|--|
-|28.06|23.88|
-
-## Notes
-* Beam decoding will be added soon.
-* I'm going to update the code when TF2.0 comes out if possible.

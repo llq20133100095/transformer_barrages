@@ -3,7 +3,7 @@
 @date: 2020.1.10
 @author: liluoqin
 @function:
-    generate barrages
+    generate pretreatment
 """
 import os
 
@@ -12,8 +12,10 @@ import tensorflow as tf
 from data_load import get_batch, input_fn
 from model import Transformer
 from hparams import Hparams
-from utils import get_hypotheses, calc_bleu, postprocess, load_hparams
+from utils import get_hypotheses, load_hparams, pro_sentpiece
 import logging
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 logging.basicConfig(level=logging.INFO)
 
@@ -40,6 +42,7 @@ def gen_barrage(raw_input):
     y_hat, _, random_predict = m.eval_gen(xs, ys)
 
     logging.info("# Session")
+
     with tf.Session() as sess:
         ckpt_ = tf.train.latest_checkpoint(hp.ckpt)
         ckpt = hp.ckpt if ckpt_ is None else ckpt_ # None: ckpt is a file. otherwise dir.
@@ -51,17 +54,18 @@ def gen_barrage(raw_input):
         y_output = sess.run(random_predict)
 
         logging.info("# get hypotheses")
-        hypotheses = get_hypotheses(1, 1, sess, y_hat, m.idx2token)
+        hypotheses, yy = get_hypotheses(1, 1, sess, y_hat, m.idx2token)
 
         logging.info("# write results")
         logging.info(hypotheses)
 
         logging.info("# Done")
 
-    return y_output
+    return y_output, yy
 
 
 if __name__ == "__main__":
     logging.info("# Prepare input sentence")
-    raw_barrages = "冲锋枪和M4比哪个好"
-    y_output = gen_barrage(raw_barrages)
+    raw_barrages = "老司机"
+    raw_barrages = pro_sentpiece(raw_barrages, hp.bpe_model)
+    y_output, yy = gen_barrage(raw_barrages)

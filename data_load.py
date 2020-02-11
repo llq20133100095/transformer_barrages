@@ -10,6 +10,7 @@ if safe, entities on the source side have the prefix 1, and the target side 2, f
 For example, fpath1, fpath2 means source file path and target file path, respectively.
 '''
 import tensorflow as tf
+import copy
 from utils import calc_num_batches
 
 
@@ -87,6 +88,8 @@ def generator_fn(sents1, sents2, vocab_fpath):
     for sent1, sent2 in zip(sents1, sents2):
         x = encode(sent1, "x", token2idx)
         y = encode(sent2, "y", token2idx)
+        # y_temp = copy.copy(y)
+        # y_temp.append(y_temp[-1])
         decoder_input, y = y[:-1], y[1:]
 
         x_seqlen, y_seqlen = len(x), len(y)
@@ -153,3 +156,15 @@ def get_batch(fpath1, fpath2, maxlen1, maxlen2, vocab_fpath, batch_size, shuffle
     batches = input_fn(sents1, sents2, vocab_fpath, batch_size, shuffle=shuffle)
     num_batches = calc_num_batches(len(sents1), batch_size)
     return batches, num_batches, len(sents1)
+
+
+if __name__ == "__main__":
+    raw_barrages = ["▁冲锋枪"]
+    vocab_fpath = './barrages_data/segmented/bpe.vocab'
+    a, b = load_vocab(vocab_fpath)
+
+    inp = raw_barrages[0].encode("utf-8")
+    y = encode(inp, "y", a)
+    y_temp = copy.copy(y)
+    y_temp.append(y_temp[-1])
+    decoder_input, y2 = y[:-1], y_temp[2:]

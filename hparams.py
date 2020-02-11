@@ -29,9 +29,9 @@ class Hparams:
 
     parser.add_argument('--lr', default=0.0003, type=float, help="learning rate")
     parser.add_argument('--warmup_steps', default=4000, type=int)
-    parser.add_argument('--logdir', default="log/barrages", help="log directory")
+    parser.add_argument('--logdir', default="log/pretreatment2", help="log directory")
     parser.add_argument('--num_epochs', default=20, type=int)
-    parser.add_argument('--evaldir', default="eval/barrages", help="evaluation dir")
+    parser.add_argument('--evaldir', default="eval/pretreatment", help="evaluation dir")
 
     # model
     parser.add_argument('--d_model', default=512, type=int,
@@ -55,24 +55,25 @@ class Hparams:
                         help="german test segmented data")
     parser.add_argument('--test2', default='iwslt2016/prepro/test.en',
                         help="english test data")
-    parser.add_argument('--ckpt', default='log/barrages', help="checkpoint file path")
+    parser.add_argument('--ckpt', default='log/pretreatment2', help="checkpoint file path")
     parser.add_argument('--test_batch_size', default=128, type=int)
     parser.add_argument('--testdir', default="test/1", help="test result dir")
 
 
 
-    # barrages
+    # pretreatment
     parser.add_argument('--barrages_data', default="barrages_data/origin/train_data_has_neg.txt", help="origin data")
+    parser.add_argument('--bpe_model', default='./barrages_data/segmented/bpe.model', help="bep model")
 
     parser.add_argument('--train_x', default='barrages_data/segmented/train_x.bpe',
-                        help="input barrages data")
+                        help="input pretreatment data")
     parser.add_argument('--train_y', default='barrages_data/segmented/train_y.bpe',
-                        help="output barrages data")
-    parser.add_argument('--eval_x', default='barrages_data/segmented/train_x.bpe',
-                        help="input barrages data")
-    parser.add_argument('--eval_y', default='barrages_data/segmented/train_y.bpe',
-                        help="output barrages data")
-    parser.add_argument('--eval_y2', default='barrages_data/prepro/train_y.txt',
+                        help="output pretreatment data")
+    parser.add_argument('--eval_x', default='barrages_data/segmented/test_x.bpe',
+                        help="input pretreatment data")
+    parser.add_argument('--eval_y', default='barrages_data/segmented/test_y.bpe',
+                        help="output pretreatment data")
+    parser.add_argument('--eval_y2', default='barrages_data/prepro/test_y.txt',
                         help="evaluation unsegmented data")
 
     parser.add_argument('--barrages_vocab', default='barrages_data/segmented/bpe.vocab',

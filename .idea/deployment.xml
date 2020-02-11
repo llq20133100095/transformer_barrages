@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="Always" serverName="liluoqin@127.0.0.195:2235">
     <serverData>
       <paths name="liluoqin@127.0.0.195:2235">
         <serverdata>
           <mappings>
-            <mapping deploy="/data/datacenter/liluoqin/transformer_barrages" local="$PROJECT_DIR$/../transformer_barrages" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="liluoqin@127.0.0.34:2234">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="liluoqin@127.0.0.37:2237">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="zhangxiang2@127.0.0.34:2224">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="zhangxiang2@127.0.0.38:2225">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="zhangxiang2@127.0.0.39:2226">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="zhangxiang2@127.0.0.40:2227">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/data/datacenter/liluoqin/transformer_barrages_xiaomi" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

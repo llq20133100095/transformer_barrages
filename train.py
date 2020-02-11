@@ -87,7 +87,7 @@ with tf.Session() as sess:
             with open(translation, 'w', encoding="utf-8") as fout:
                 fout.write("\n".join(hypotheses))
 
-            print(hypotheses)
+            logging.info(hypotheses[1:10])
             logging.info("# calc bleu score and append it to translation")
             calc_bleu(hp.eval_y2, translation)
 

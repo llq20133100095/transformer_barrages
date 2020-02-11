@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80877039-a875-4226-85fe-68aae542a526" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretreatment/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages/barrages_prepro.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretreatment/barrages_prepro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/prepro/train_x.txt" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/prepro/train_x.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/prepro/train_y.txt" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/prepro/train_y.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/bpe.model" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/bpe.model" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/bpe.vocab" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/bpe.vocab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/train_x.bpe" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/train_x.bpe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/train_y.bpe" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/train_y.bpe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrages_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hparams.py" beforeDir="false" afterPath="$PROJECT_DIR$/hparams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +54,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1WVPMOICquvs4t4FevY6VmzP76w" />
   <component name="ProjectViewState">
@@ -52,10 +71,10 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../git/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -78,6 +97,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workground_interest\transformer-master\barrages_data\prepro" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.barrages_generate">
     <configuration default="true" type="DjangoTestsConfigurationType">
@@ -149,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="barrages_generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="barrages_generate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="transformer-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -171,7 +202,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="barrages_prepro" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="barrages_prepro (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="transformer-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -179,13 +210,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../transformer_barrages/barrages" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretreatment" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrages/barrages_prepro.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretreatment/barrages_prepro.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="barrages_prepro" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="transformer-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretreatment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretreatment/barrages_prepro.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,30 +252,28 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
+      <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_load.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="transformer-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
       <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
@@ -232,29 +283,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="transformer-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,33 +352,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.train" />
-      <item itemvalue="Python.data_load" />
       <item itemvalue="Python.barrages_prepro" />
       <item itemvalue="Python.barrages_generate" />
       <item itemvalue="Python.model" />
+      <item itemvalue="Python.barrages_prepro (1)" />
+      <item itemvalue="Python.data_load" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.barrages_generate" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.barrages_generate" />
-        <item itemvalue="Python.train" />
-        <item itemvalue="Python.barrages_prepro" />
+        <item itemvalue="Python.model" />
+        <item itemvalue="Python.data_load" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -368,11 +384,33 @@
       <workItem from="1578626262894" duration="29376000" />
       <workItem from="1579231746811" duration="5977000" />
       <workItem from="1579337550004" duration="20784000" />
+      <workItem from="1581041091411" duration="64624000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="551" y="144" key="#barrages_generate" timestamp="1579232086828">
@@ -432,10 +470,13 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/trransformer_barrages$model.coverage" NAME="model Coverage Results" MODIFIED="1579415645907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trransformer_barrages$barrages_prepro__1_.coverage" NAME="barrages_prepro (1) Coverage Results" MODIFIED="1581064352143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretreatment" />
+    <SUITE FILE_PATH="coverage/trransformer_barrages$model.coverage" NAME="model Coverage Results" MODIFIED="1581342760968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trransformer_barrages$data_load.coverage" NAME="data_load Coverage Results" MODIFIED="1581301817684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/transformer_master$data_load.coverage" NAME="data_load Coverage Results" MODIFIED="1577936248939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trransformer_barrages$barrages_generate.coverage" NAME="barrages_generate Coverage Results" MODIFIED="1581304793916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/transformer_barrages$barrages_prepro.coverage" NAME="barrages_prepro Coverage Results" MODIFIED="1578648742211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../transformer_barrages/barrages" />
     <SUITE FILE_PATH="coverage/transformer_barrages$barrages_generate.coverage" NAME="barrages_generate Coverage Results" MODIFIED="1579166268191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../transformer_barrages" />
-    <SUITE FILE_PATH="coverage/transformer_master$data_load.coverage" NAME="data_load Coverage Results" MODIFIED="1577936248939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/transformer_master$train.coverage" NAME="train Coverage Results" MODIFIED="1577936348266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
