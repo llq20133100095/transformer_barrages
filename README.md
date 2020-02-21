@@ -49,7 +49,15 @@ python barrrages_generate.py
 
 ![img](./fig/barrage_gen.png)
 
+## 运行在微信界面上
+运行代码:
 
+```
+python ichat_robot.py
+```
+
+结果：
+![wechat](./fig/wechat_function.jpg)
 
 ## Training Loss Curve
 <img src="fig/loss.png">

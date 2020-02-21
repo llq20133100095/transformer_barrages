@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80877039-a875-4226-85fe-68aae542a526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretreatment/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages/barrages_prepro.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretreatment/barrages_prepro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/prepro/train_x.txt" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/prepro/train_x.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/prepro/train_y.txt" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/prepro/train_y.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/bpe.model" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/bpe.model" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/bpe.vocab" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/bpe.vocab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/train_x.bpe" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/train_x.bpe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/segmented/train_y.bpe" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_data/segmented/train_y.bpe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrages_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrages_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hparams.py" beforeDir="false" afterPath="$PROJECT_DIR$/hparams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,10 +55,10 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../git/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -110,7 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.barrages_generate">
+  <component name="RunManager" selected="Python.ichat_robot">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="transformer_barrages" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,6 +169,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
       <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
@@ -225,33 +210,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="barrages_prepro" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="transformer-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
-      </envs>
-      <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pretreatment" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pretreatment/barrages_prepro.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="data_load" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="transformer-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
       <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
@@ -269,11 +233,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ichat_robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="transformer-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/data/datacenter/liluoqin/anaconda3/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ichat_robot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="transformer-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="LD_LIBRARY_PATH" value="/usr/local/cuda/lib64" />
       </envs>
       <option name="SDK_HOME" value="sftp://liluoqin@127.0.0.195:2235/usr/bin/python3.7" />
@@ -352,19 +340,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.barrages_prepro" />
       <item itemvalue="Python.barrages_generate" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.barrages_prepro (1)" />
       <item itemvalue="Python.data_load" />
+      <item itemvalue="Python.ichat_robot" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ichat_robot" />
+        <item itemvalue="Python.ichat_robot" />
         <item itemvalue="Python.barrages_generate" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.barrages_generate" />
-        <item itemvalue="Python.model" />
-        <item itemvalue="Python.data_load" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +372,10 @@
       <workItem from="1578626262894" duration="29376000" />
       <workItem from="1579231746811" duration="5977000" />
       <workItem from="1579337550004" duration="20784000" />
-      <workItem from="1581041091411" duration="64624000" />
+      <workItem from="1581041091411" duration="65819000" />
+      <workItem from="1581845821513" duration="10932000" />
+      <workItem from="1582021030195" duration="7890000" />
+      <workItem from="1582290139981" duration="1059000" />
     </task>
     <servers />
   </component>
@@ -406,7 +397,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -460,6 +453,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.PyCharm2019.2/system/remote_sources/-944214923/1064317483/itchat/__init__.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -470,6 +469,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trransformer_barrages$ichat_robot.coverage" NAME="ichat_robot Coverage Results" MODIFIED="1582028408705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/trransformer_barrages$barrages_prepro__1_.coverage" NAME="barrages_prepro (1) Coverage Results" MODIFIED="1581064352143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pretreatment" />
     <SUITE FILE_PATH="coverage/trransformer_barrages$model.coverage" NAME="model Coverage Results" MODIFIED="1581342760968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/trransformer_barrages$data_load.coverage" NAME="data_load Coverage Results" MODIFIED="1581301817684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
