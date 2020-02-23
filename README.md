@@ -9,10 +9,16 @@
 * tqdm>=4.28.1
 
 ## Dataset
-虎牙直播中，绝地求生的弹幕语料。其数据存放在：
+“绝地求生”的弹幕语料。其数据存放在：
 ```
 barrages_data/train_data_has_neg.txt
 ```
+
+通过sentencepiece分词之后，其数据分布为：
+
+|  mean_len   | max_len  | min_len | 
+|  ----  | ----  | ----  |
+| 4.537800518219686  | 30 | 1 |
 
 ## Training
 * STEP 1. 运行下面的命令，生成预处理的弹幕语料
