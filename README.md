@@ -9,7 +9,7 @@
 * tqdm>=4.28.1
 
 ## Dataset
-“绝地求生”的弹幕语料。其数据存放在：
+弹幕语料。其数据存放在：
 ```
 barrages_data/train_data_has_neg.txt
 ```
@@ -17,7 +17,7 @@ barrages_data/train_data_has_neg.txt
 通过sentencepiece分词之后，其数据分布为：
 
 |  mean_len   | max_len  | min_len | 
-|  ----  | ----  | ----  |
+|  :----:  | :----:  | :----:  |
 | 4.537800518219686  | 30 | 1 |
 
 ## Training
