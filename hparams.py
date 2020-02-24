@@ -28,9 +28,9 @@ class Hparams:
     parser.add_argument('--eval_batch_size', default=128, type=int)
 
     parser.add_argument('--lr', default=0.0003, type=float, help="learning rate")
-    parser.add_argument('--warmup_steps', default=4000, type=int)
-    parser.add_argument('--logdir', default="log/pretreatment2", help="log directory")
-    parser.add_argument('--num_epochs', default=20, type=int)
+    parser.add_argument('--warmup_steps', default=1000, type=int)
+    parser.add_argument('--logdir', default="log/pretreatment", help="log directory")
+    parser.add_argument('--num_epochs', default=40, type=int)
     parser.add_argument('--evaldir', default="eval/pretreatment", help="evaluation dir")
 
     # model
@@ -55,7 +55,7 @@ class Hparams:
                         help="german test segmented data")
     parser.add_argument('--test2', default='iwslt2016/prepro/test.en',
                         help="english test data")
-    parser.add_argument('--ckpt', default='log/pretreatment2', help="checkpoint file path")
+    parser.add_argument('--ckpt', default='log/pretreatment', help="checkpoint file path")
     parser.add_argument('--test_batch_size', default=128, type=int)
     parser.add_argument('--testdir', default="test/1", help="test result dir")
 
@@ -79,7 +79,9 @@ class Hparams:
     parser.add_argument('--barrages_vocab', default='barrages_data/segmented/bpe.vocab',
                         help="vocabulary file path")
 
-    parser.add_argument('--barrages_maxlen1', default=20, type=int,
+    parser.add_argument('--barrages_maxlen1', default=11, type=int,
                         help="maximum length of a source sequence")
-    parser.add_argument('--barrages_maxlen2', default=20, type=int,
+    parser.add_argument('--barrages_maxlen2', default=11, type=int,
                         help="maximum length of a target sequence")
+
+    parser.add_argument('--belu_fig', default='fig/bleu.png', help="use this path to save bleu.png")

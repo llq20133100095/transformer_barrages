@@ -10,7 +10,7 @@ import tensorflow as tf
 from model import Transformer
 from tqdm import tqdm
 from data_load import get_batch
-from utils import save_hparams, save_variable_specs, get_hypotheses, calc_bleu
+from utils import save_hparams, save_variable_specs, get_hypotheses, calc_belu_nltk, plot_fig
 import os
 from hparams import Hparams
 import math
@@ -44,7 +44,7 @@ eval_init_op = iter.make_initializer(eval_batches)
 
 logging.info("# Load model")
 m = Transformer(hp)
-loss, train_op, global_step, train_summaries = m.train(xs, ys)
+loss, train_op, global_step, train_summaries, lr = m.train(xs, ys)
 y_hat, eval_summaries = m.eval(xs, ys)
 # y_hat = m.infer(xs, ys)
 
@@ -64,13 +64,16 @@ with tf.Session() as sess:
     sess.run(train_init_op)
     total_steps = hp.num_epochs * num_train_batches
     _gs = sess.run(global_step)
+    bleu_score = []
+
     for i in tqdm(range(_gs, total_steps+1)):
-        _, _gs, _summary = sess.run([train_op, global_step, train_summaries])
+        _, _gs, _summary, _lr = sess.run([train_op, global_step, train_summaries, lr])
         epoch = math.ceil(_gs / num_train_batches)
         summary_writer.add_summary(_summary, _gs)
 
         if _gs and _gs % num_train_batches == 0:
             logging.info("epoch {} is done".format(epoch))
+            logging.info("# LR: %f" % _lr)
             _loss = sess.run(loss) # train loss
 
             logging.info("# test evaluation")
@@ -78,7 +81,7 @@ with tf.Session() as sess:
             summary_writer.add_summary(_eval_summaries, _gs)
 
             logging.info("# get hypotheses")
-            hypotheses = get_hypotheses(num_eval_batches, num_eval_samples, sess, y_hat, m.idx2token)
+            hypotheses, yy = get_hypotheses(num_eval_batches, num_eval_samples, sess, y_hat, m.idx2token)
 
             logging.info("# write results")
             model_output = "barrages_E%02dL%.2f" % (epoch, _loss)
@@ -89,7 +92,10 @@ with tf.Session() as sess:
 
             logging.info(hypotheses[1:10])
             logging.info("# calc bleu score and append it to translation")
-            calc_bleu(hp.eval_y2, translation)
+            # calc_bleu(hp.eval_y2, translation)
+            bleu_score.append(calc_belu_nltk(hp.bpe_model, hp.eval_y2, hypotheses))
+            cur_epoch = list(range(len(bleu_score)))
+            plot_fig(cur_epoch, bleu_score, "BLEU-2", hp.belu_fig)
 
             logging.info("# save models")
             ckpt_name = os.path.join(hp.logdir, model_output)

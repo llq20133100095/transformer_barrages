@@ -157,7 +157,7 @@ class Transformer:
 
         summaries = tf.summary.merge_all()
 
-        return loss, train_op, global_step, summaries
+        return loss, train_op, global_step, summaries, lr
 
     def eval(self, xs, ys):
         '''Predicts autoregressively

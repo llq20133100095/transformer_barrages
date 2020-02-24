@@ -15,7 +15,8 @@ import json
 import os, re
 import logging
 import sentencepiece as spm
-
+import matplotlib.pyplot as plt
+from nltk.translate.bleu_score import corpus_bleu
 logging.basicConfig(level=logging.INFO)
 
 def calc_num_batches(total_num, batch_size):
@@ -68,7 +69,7 @@ def postprocess(hypotheses, idx2token):
     '''
     _hypotheses = []
     for h in hypotheses:
-        sent = "".join(idx2token[idx] for idx in h)
+        sent = " ".join(idx2token[idx] for idx in h)
         sent = sent.split("</s>")[0].strip()
         sent = sent.replace("▁", "") # remove bpe symbols
         _hypotheses.append(sent.strip())
@@ -198,3 +199,39 @@ def pro_sentpiece(sent, bep_model):
     pieces = sp.EncodeAsPieces(sent)
     return " ".join(pieces)
 
+
+def calc_belu_nltk(bep_model, ref, translation):
+    """
+    calculate BELU-2 score.
+    :param bep_model:
+    :param ref: list, reference sentences
+    :param translation: list, model generate sentences
+    :return: score: float
+    """
+    # read ref file
+    ref_sent = []
+    with open(ref, "r", encoding="utf-8") as f:
+        while True:
+            line = f.readline()
+            if line:
+                line = line.replace("▁", "")
+                ref_sent.append(line.strip())
+            else:
+                break
+
+    ref_pieces_ = [[i.split()] for i in ref_sent]
+    trans_pieces_ = [i.split() for i in translation]
+
+    score = corpus_bleu(ref_pieces_, trans_pieces_, weights=(0.5, 0.5, 0, 0))
+    logging.info("# BELU-2: %f" % score)
+    return score
+
+
+def plot_fig(x, y, title, save_fig):
+    plt.figure(figsize=(10, 10))
+    plt.title(title)
+    plt.grid()  # open grid
+    plt.xlabel('number epoch')
+    plt.ylabel("BELU-2")
+    plt.plot(x, y)
+    plt.savefig(save_fig)

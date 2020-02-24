@@ -1,5 +1,9 @@
 from hparams import Hparams
-
+from nltk.translate.bleu_score import corpus_bleu
+references = [[['▁怎么不开车', '去捡', '啊', '哦', '去']], [['▁怎么不开车', '去捡', '啊', '哦', '去']]]
+candidates = [['▁怎么不开车', '去捡'], ['去捡', 'ni']]
+score = corpus_bleu(references, candidates, weights=(0.5, 0.5, 0, 0))
+print(score)
 
 def read_file(file_name, sen_len):
     with open(file_name, "r", encoding="utf-8") as f:
