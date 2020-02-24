@@ -4,6 +4,7 @@
 - 目前仅仅提供训练好的模型下载，原始数据暂时不提供
 - 训练好的模型下载地址为：
 [https://note.youdao.com/](https://note.youdao.com/)
+- 然后把模型进行解压，放到根目录就可以了
 
 ## Requirements
 * python==3.x (Let's move on to python 3 if you still use python 2)
