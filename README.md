@@ -3,7 +3,7 @@
 
 - 目前仅仅提供训练好的模型下载，原始数据暂时不提供
 - 训练好的模型下载地址为：
-[https://pan.baidu.com/s/1Y-rkJDrAro5wINqOH_-o1w (https://pan.baidu.com/s/1Y-rkJDrAro5wINqOH_-o1w )
+[https://pan.baidu.com/s/1Y-rkJDrAro5wINqOH_-o1w](https://pan.baidu.com/s/1Y-rkJDrAro5wINqOH_-o1w)
 和提取码：q5it
 - 然后把模型进行解压，放到根目录就可以了
 
