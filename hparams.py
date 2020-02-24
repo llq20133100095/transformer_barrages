@@ -29,7 +29,7 @@ class Hparams:
 
     parser.add_argument('--lr', default=0.0003, type=float, help="learning rate")
     parser.add_argument('--warmup_steps', default=1000, type=int)
-    parser.add_argument('--logdir', default="log/p2", help="log directory")
+    parser.add_argument('--logdir', default="log/pretreatment", help="log directory")
     parser.add_argument('--num_epochs', default=40, type=int)
     parser.add_argument('--evaldir', default="eval/pretreatment", help="evaluation dir")
 
@@ -55,7 +55,7 @@ class Hparams:
                         help="german test segmented data")
     parser.add_argument('--test2', default='iwslt2016/prepro/test.en',
                         help="english test data")
-    parser.add_argument('--ckpt', default='log/p2', help="checkpoint file path")
+    parser.add_argument('--ckpt', default='log/pretreatment', help="checkpoint file path")
     parser.add_argument('--test_batch_size', default=128, type=int)
     parser.add_argument('--testdir', default="test/1", help="test result dir")
 
