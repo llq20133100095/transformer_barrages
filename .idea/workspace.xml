@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80877039-a875-4226-85fe-68aae542a526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/origin/first_label_dict.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/origin/label_to_nums.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/origin/train_additional_data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/origin/train_data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrages_data/origin/usual_data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hparams.py" beforeDir="false" afterPath="$PROJECT_DIR$/hparams.py" afterDir="false" />
-    </list>
+    <list default="true" id="80877039-a875-4226-85fe-68aae542a526" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,7 +373,7 @@
       <workItem from="1582021030195" duration="7890000" />
       <workItem from="1582290139981" duration="1824000" />
       <workItem from="1582422495734" duration="26691000" />
-      <workItem from="1582509247519" duration="6728000" />
+      <workItem from="1582509247519" duration="6974000" />
     </task>
     <servers />
   </component>
